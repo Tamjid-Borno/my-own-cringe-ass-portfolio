@@ -1,0 +1,944 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* styles.css */
+
+nav {
+    width: 100%; /* Set the width to 100% */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color */
+    padding: 10px 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.social-icons img {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+}
+
+section {
+    padding: 50px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#about-me {
+    background-image: url('bg.gif'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: cyan;
+    text-align: left;
+    padding: 50px;
+    position: relative;
+}
+
+#about-me h1 {
+    background: linear-gradient(to right, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 125px;
+    left: 200px;
+    line-height: 1.5;
+}
+
+#typing-text {
+    font-size: 50px;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    border-right: .15em solid orange;
+    animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
+    position: absolute;
+    left: 300px;
+    top: 250px;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+:root {
+    --terminal-width: 720px; /* Initial width of the terminal */
+}
+
+.terminal {
+    background-color: black;
+    color: green;
+    padding: 20px;
+    font-size: 19px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures text doesn't overflow the terminal */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-radius: 5px;
+    width: var(--terminal-width); /* Use CSS variable for width */
+    position: absolute; /* Position the terminal absolutely */
+    left: 100px; /* Set the left position */
+    top: 400px; /* Set the top position */
+}
+
+
+
+.typing-text {
+    padding-right: 5px;
+    animation: typing 3s steps(40) infinite;
+}
+
+/* CSS for image container */
+.about-me-container {
+    position: relative; /* Ensure position is relative to the parent container */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Automatically adjust height */
+}
+
+.image-container {
+    position: absolute; /* Position the container relative to its parent */
+    top: 30%; /* Position the container 50% from the top */
+    right: 250px; /* Position the container flush with the right side */
+    transform: translateY(-50%); /* Center the container vertically */
+    width: 350px; /* Adjust width as needed */
+    height: auto; /* Automatically adjust height */
+    margin: 20px; /* Add margin as needed */
+}
+
+.image-container img {
+    width: 100%; /* Occupy full width of container */
+    height: auto; /* Automatically adjust height */
+    display: block; /* Ensure proper display as block element */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+
+#UI {
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Align the image vertically at 50% from the top */
+    left: 1450px; /* Align the image horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 1; /* Ensure the image appears above other elements */
+    /* Adjust the following properties as needed */
+    /* You can use top, bottom, left, right properties to adjust position */
+    /* Use negative values for right and bottom to move towards right and bottom */
+}
+
+#UI2 {
+    position: absolute; /* Position the image absolutely */
+    top: 30%; /* Align the image vertically at 50% from the top */
+    left: 470px; /* Align the image horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 1; /* Ensure the image appears above other elements */
+    /* Adjust the following properties as needed */
+    /* You can use top, bottom, left, right properties to adjust position */
+    /* Use negative values for right and bottom to move towards right and bottom */
+}
+
+.button {
+    background: linear-gradient(to right, blue, purple);
+    border: none;
+    color: cyan;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute; /* Adjust position */
+    right: 18%; /* Adjust left position */
+    top: 55%; /* Adjust top position */
+    transform: translate(-50%, -50%); /* Center the button */
+}
+
+.button:hover {
+    background: linear-gradient(to right, purple, blue);
+}
+
+/* Media Queries */
+
+
+
+#skills {
+    background-image: url('bg2.gif'); /* Replace 'skills-background.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white for better contrast */
+    padding: 50px; /* Add padding to the content area */
+}
+
+
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .pie {
+    --p: 20;
+    --b: 22px;
+    --c: darkred;
+    --w: 150px;
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    top: -120px; /* Adjust the top position as needed */
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  
+  body {
+    background:#f2f2f2;
+  }
+
+  #skills h2 {
+    font-family: Arial, sans-serif;
+    font-size: 50px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white; /* Change the color as needed */
+    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
+    text-align: center; /* Align the text in the center */
+    position: relative;
+    top: -19%;
+}
+
+.new-pie {
+    --p: 20;
+    --b: 22px;
+    --c: darkred;
+    --w: 200px; /* Increase width by 10 pixels */
+    --h: 200px; /* Increase height by 10 pixels */
+    width: var(--w);
+    height: var(--h);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    top: -650px; /* Adjust the top position as needed */
+    right: -380px;
+    color: white; /* Change text color to white */
+}
+  
+  .new-pie:before,
+  .new-pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .new-pie:before {
+    inset: 0;
+    background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  }
+  
+  .new-pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  
+  .animate {
+    animation: p 1s .5s both;
+  }
+  
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  
+  .no-round:after {
+    content: none;
+  }
+  
+  @keyframes p {
+    from {
+      --p: 0
+    }
+  }
+  
+  body {
+    background: #f2f2f2;
+  }
+  
+  #contacts h2 {
+    font-family: Arial, sans-serif;
+    font-size: 50px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white; /* Change the color as needed */
+    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
+    text-align: center; /* Align the text in the center */
+    position: relative;
+    top: -650px;
+    left: -800px;
+}
+
+#contacts {
+    background-image: url('bg3.gif'); /* Replace 'skills-background.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white for better contrast */
+    padding: 50px; /* Add padding to the content area */
+}
+
+@media only screen and (min-width: 1920px) {
+    /* Adjust the position of the h2 */
+    h2 {
+      margin-top: 50px; /* Adjust as needed */
+    }
+  
+    /* Adjust the position of the pie charts */
+    .pie {
+      top: -600px; /* Adjust as needed */
+      right: -200px; /* Adjust as needed */
+    }
+
+    @property --p{
+        syntax: '<number>';
+        inherits: true;
+        initial-value: 0;
+      }
+      
+      .pie {
+        --p: 20;
+        --b: 22px;
+        --c: darkred;
+        --w: 150px;
+        width: var(--w);
+        aspect-ratio: 1;
+        position: relative;
+        display: inline-grid;
+        margin: 5px;
+        place-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: sans-serif;
+        top: -190px; /* Adjust the top position as needed */
+      }
+      .pie:before,
+      .pie:after {
+        content:"";
+        position:absolute;
+        border-radius:50%;
+      }
+      .pie:before {
+        inset:0;
+        background:
+          radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+          conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+        -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+                mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+      }
+      .pie:after {
+        inset:calc(50% - var(--b)/2);
+        background:var(--c);
+        transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+      }
+      .animate {
+        animation:p 1s .5s both;
+      }
+      .no-round:before {
+        background-size:0 0,auto;
+      }
+      .no-round:after {
+        content:none;
+      }
+      @keyframes p {
+        from{--p:0}
+      }
+      
+      body {
+        background:#f2f2f2;
+      }
+
+      .new-pie {
+        --p: 20;
+        --b: 22px;
+        --c: darkred;
+        --w: 200px; /* Increase width by 10 pixels */
+        --h: 200px; /* Increase height by 10 pixels */
+        width: var(--w);
+        height: var(--h);
+        aspect-ratio: 1;
+        position: relative;
+        display: inline-grid;
+        margin: 5px;
+        place-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: sans-serif;
+        top: -850px; /* Adjust the top position as needed */
+        right: -590px;
+        color: white; /* Change text color to white */
+    }
+      
+      .new-pie:before,
+      .new-pie:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+      
+      .new-pie:before {
+        inset: 0;
+        background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+          conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+        -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+        mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+      }
+      
+      .new-pie:after {
+        inset: calc(50% - var(--b)/2);
+        background: var(--c);
+        transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w)/2));
+      }
+      
+      .animate {
+        animation: p 1s .5s both;
+      }
+      
+      .no-round:before {
+        background-size: 0 0, auto;
+      }
+      
+      .no-round:after {
+        content: none;
+      }
+      
+      @keyframes p {
+        from {
+          --p: 0
+        }
+      }
+      
+      body {
+        background: #f2f2f2;
+      }
+      #contacts h2 {
+        font-family: Arial, sans-serif;
+        font-size: 50px; /* Adjust the font size as needed */
+        font-weight: bold;
+        color: white; /* Change the color as needed */
+        margin-bottom: 20px; /* Adjust the margin bottom for spacing */
+        text-align: center; /* Align the text in the center */
+        position: relative;
+        top: -850px;
+        left: -800px;
+    }
+  }
+
+  .card {
+    width: 500px;
+    height: 700px;
+    background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.8), rgba(128, 0, 128, 0.8)); /* Linear gradient background with less transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    position: absolute; /* Changed to relative positioning */
+    right:35%;
+    top: 150px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align form items to the bottom */
+    height: 100%; /* Occupy full height of the card */
+  }
+  
+  .card label {
+    margin-bottom: 5px;
+  }
+  
+  .card input[type="text"],
+  .card input[type="email"],
+  .card textarea {
+    color:black;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    font-family: Arial, sans-serif; /* Change font family */
+  }
+  
+  .card textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    color:blue;
+  }
+  
+  .card input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Align the submit button to the bottom */
+  }
+  
+  .card input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+  
+  .card h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Change the font family */
+    font-size: 42px; /* Change the font size */
+    color:grey; /* Change the font color */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    position:absolute;
+    top:-4%;
+    right:98px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Increase scale on hover */
+  }
+
+  footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center-align the content */
+    position: absolute; /* Fixed position to keep it at the bottom */
+    width: 97.7%; /* Full width */
+    bottom: 0px; /* Stick to the bottom */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 14px; /* Adjust font size */
+}
+
+.image1,
+.image2 {
+    position: absolute;
+    top: 95px;
+    left: 35%;
+    width: 25%;
+    height: 25%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image2 {
+    opacity: 0; /* Initially hide the second image */
+}
+
+.card:hover .image1 {
+    opacity: 0; /* Hide image1 on hover */
+}
+
+.card:hover .image2 {
+    opacity: 1; /* Show image2 on hover */
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* styles.css */
+
+
+#about-me {
+  background-image: url('bg.gif'); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: cyan;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+}
+
+#about-me h1 {
+    background: linear-gradient(to right, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 42px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 125px;
+    left: 25%;
+    line-height: 1.5;
+}
+
+#typing-text {
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    border-right: .15em solid orange;
+    animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+:root {
+    --terminal-width: 720px; /* Initial width of the terminal */
+}
+
+.terminal {
+    display:none;
+}
+
+
+
+.typing-text {
+    padding-right: 5px;
+    animation: typing 3s steps(40) infinite;
+}
+
+/* CSS for image container */
+.about-me-container {
+    position: relative; /* Ensure position is relative to the parent container */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Automatically adjust height */
+}
+
+.image-container {
+    position: absolute; /* Position the container relative to its parent */
+    top: 45%; /* Position the container 50% from the top */
+    right: 20%; /* Position the container flush with the right side */
+    transform: translateY(-50%); /* Center the container vertically */
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Automatically adjust height */
+    margin: 20px; /* Add margin as needed */
+}
+
+.image-container img {
+    width: 100%; /* Occupy full width of container */
+    height: auto; /* Automatically adjust height */
+    display: block; /* Ensure proper display as block element */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+
+#UI {
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Align the image vertically at 50% from the top */
+    left: 1450px; /* Align the image horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 1; /* Ensure the image appears above other elements */
+    /* Adjust the following properties as needed */
+    /* You can use top, bottom, left, right properties to adjust position */
+    /* Use negative values for right and bottom to move towards right and bottom */
+}
+
+#UI2 {
+    position: absolute; /* Position the image absolutely */
+    top: 30%; /* Align the image vertically at 50% from the top */
+    left: 470px; /* Align the image horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 1; /* Ensure the image appears above other elements */
+    /* Adjust the following properties as needed */
+    /* You can use top, bottom, left, right properties to adjust position */
+    /* Use negative values for right and bottom to move towards right and bottom */
+}
+
+.button {
+    background: linear-gradient(to right, blue, purple);
+    border: none;
+    color: cyan;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute; /* Adjust position */
+    right: 25%; /* Adjust left position */
+    top: 70%; /* Adjust top position */
+    transform: translate(-50%, -50%); /* Center the button */
+}
+
+.button:hover {
+    background: linear-gradient(to right, purple, blue);
+}
+
+/* Media Queries */
+
+
+
+#skills {
+    background-image: url('bg2.gif'); /* Replace 'skills-background.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white for better contrast */
+    padding: 50px; /* Add padding to the content area */
+}
+
+
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .pie {
+    display: none;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  
+  body {
+    background:#f2f2f2;
+  }
+
+  #skills h2 {
+    font-family: Arial, sans-serif;
+    font-size: 32px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white; /* Change the color as needed */
+    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
+    text-align: center; /* Align the text in the center */
+    position: relative;
+    top: -40%;
+}
+
+.new-pie {
+    display:none;
+}
+  
+  .new-pie:before,
+  .new-pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .new-pie:before {
+    inset: 0;
+    background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  }
+  
+  .new-pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p) * 3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  
+  .animate {
+    animation: p 1s .5s both;
+  }
+  
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  
+  .no-round:after {
+    content: none;
+  }
+  
+  @keyframes p {
+    from {
+      --p: 0
+    }
+  }
+  
+  body {
+    background: #f2f2f2;
+  }
+  
+  #contacts h2 {
+    font-family: Arial, sans-serif;
+    font-size: 50px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: white; /* Change the color as needed */
+    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
+    text-align: center; /* Align the text in the center */
+    position: relative;
+    top: -650px;
+    left: -800px;
+}
+
+footer {
+  
+  position: fixed; /* Fixed position to keep it at the bottom */
+  width: 100%; /* Full width */
+  
+}
+#contacts {
+    background-image: url('bg3.gif'); /* Replace 'skills-background.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white for better contrast */
+    padding: 50px; /* Add padding to the content area */
+}
+
+}
+
+@media only screen and (max-width: 769px) {
+
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+}
