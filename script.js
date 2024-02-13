@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (charIndex < texts[index].length) {
         typingText.textContent += texts[index].charAt(charIndex);
         charIndex++;
-        setTimeout(type, 200); // Adjust typing speed (milliseconds)
+        setTimeout(type, 200); 
       } else {
-        setTimeout(erase, 2000); // Adjust delay before backspacing (milliseconds)
+        setTimeout(erase, 2000);
       }
     }
   
@@ -29,18 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
       if (charIndex > 0) {
         typingText.textContent = texts[index].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(erase, 100); // Adjust backspacing speed (milliseconds)
+        setTimeout(erase, 100);
       } else {
         index = (index + 1) % texts.length;
-        setTimeout(type, 500); // Adjust delay before typing next text (milliseconds)
+        setTimeout(type, 500);
       }
     }
   
-    type(); // Start typing
+    type(); 
   });
   
-// script.js
-// JavaScript to control the typing animation
+
 document.addEventListener('DOMContentLoaded', function() {
   const lines = [
     "I'm Borno. I'm from Bangladesh. I've started learning coding in 2020 when",
@@ -66,17 +65,17 @@ document.addEventListener('DOMContentLoaded', function() {
           if (charIndex < lines[lineIndex].length) {
               typingDiv.innerHTML += lines[lineIndex].charAt(charIndex);
               charIndex++;
-              setTimeout(type, 50); // Adjust typing speed (milliseconds)
+              setTimeout(type, 50); 
           } else {
-              typingDiv.innerHTML += '<br>'; // Insert line break
+              typingDiv.innerHTML += '<br>'; 
               charIndex = 0;
               lineIndex++;
-              setTimeout(type, 500); // Adjust delay between lines (milliseconds)
+              setTimeout(type, 500); 
           }
       }
   }
 
-  // Call the typing function when the page loads
+  
   type();
 });
 
@@ -116,22 +115,22 @@ document.addEventListener('DOMContentLoaded', function() {
               if (charIndex < lines[lineIndex].length) {
                   typingDiv.innerHTML += lines[lineIndex].charAt(charIndex);
                   charIndex++;
-                  setTimeout(type, 50); // Adjust typing speed (milliseconds)
+                  setTimeout(type, 50);
               } else {
-                  typingDiv.innerHTML += '<br>'; // Insert line break
+                  typingDiv.innerHTML += '<br>'; 
                   charIndex = 0;
                   lineIndex++;
-                  setTimeout(type, 500); // Adjust delay between lines (milliseconds)
+                  setTimeout(type, 500); 
               }
           }
       }
 
-      // Call the typing function when the page loads
+      
       type();
   }
 });
 
-// Check if the pie chart container is in view
+
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     const pieChartContainer = document.querySelector('.pie-chart-container');
