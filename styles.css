@@ -750,13 +750,11 @@ header {
 
 #UI2 {
     position: absolute;
-    top: 30%; /* Align the image vertically at 50% from the top */
-    left: 470px; /* Align the image horizontally at 50% from the left */
-    transform: translate(-50%, -50%); /* Center the image */
-    z-index: 1; /* Ensure the image appears above other elements */
-    /* Adjust the following properties as needed */
-    /* You can use top, bottom, left, right properties to adjust position */
-    /* Use negative values for right and bottom to move towards right and bottom */
+    top: 30%; 
+    left: 470px; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+   
 }
 
 .button {
@@ -771,10 +769,10 @@ header {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
-    position: absolute; /* Adjust position */
-    right: 25%; /* Adjust left position */
-    top: 70%; /* Adjust top position */
-    transform: translate(-50%, -50%); /* Center the button */
+    position: absolute; 
+    right: 25%; 
+    top: 70%; 
+    transform: translate(-50%, -50%); 
 }
 
 .button:hover {
@@ -786,11 +784,11 @@ header {
 
 
 #skills {
-    background-image: url('bg2.gif'); /* Replace 'skills-background.jpg' with the path to your image */
-    background-size: cover; /* Cover the entire container with the background image */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Set text color to white for better contrast */
-    padding: 50px; /* Add padding to the content area */
+    background-image: url('bg2.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #fff; 
+    padding: 50px; 
 }
 
 
@@ -841,11 +839,11 @@ header {
 
   #skills h2 {
     font-family: Arial, sans-serif;
-    font-size: 32px; /* Adjust the font size as needed */
+    font-size: 32px; 
     font-weight: bold;
-    color: white; /* Change the color as needed */
-    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
-    text-align: center; /* Align the text in the center */
+    color: white; 
+    margin-bottom: 20px; 
+    text-align: center;
     position: relative;
     top: -40%;
 }
@@ -899,11 +897,11 @@ header {
   
   #contacts h2 {
     font-family: Arial, sans-serif;
-    font-size: 50px; /* Adjust the font size as needed */
+    font-size: 50px;
     font-weight: bold;
-    color: white; /* Change the color as needed */
-    margin-bottom: 20px; /* Adjust the margin bottom for spacing */
-    text-align: center; /* Align the text in the center */
+    color: white; 
+    margin-bottom: 20px; 
+    text-align: center;
     position: relative;
     top: -650px;
     left: -800px;
@@ -911,16 +909,16 @@ header {
 
 footer {
   
-  position: fixed; /* Fixed position to keep it at the bottom */
-  width: 100%; /* Full width */
+  position: fixed; 
+  width: 100%; 
   
 }
 #contacts {
-    background-image: url('bg3.gif'); /* Replace 'skills-background.jpg' with the path to your image */
-    background-size: cover; /* Cover the entire container with the background image */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Set text color to white for better contrast */
-    padding: 50px; /* Add padding to the content area */
+    background-image: url('bg3.gif'); 
+    background-size: cover; 
+    background-position: center;
+    color: #fff;
+    padding: 50px;
 }
 
 }
