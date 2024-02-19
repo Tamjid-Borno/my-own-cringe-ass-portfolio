@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const texts = ["Borno", "a Web Designer", "a Programmer"];
+    const texts = ["Web Designer", "Programmer"];
     let index = 0;
     let charIndex = 0;
     const typingText = document.getElementById('typing-text');
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (charIndex < texts[index].length) {
         typingText.textContent += texts[index].charAt(charIndex);
         charIndex++;
-        setTimeout(type, 200); 
+        setTimeout(type, 200); // Adjust typing speed (milliseconds)
       } else {
-        setTimeout(erase, 2000);
+        setTimeout(erase, 2000); // Adjust delay before backspacing (milliseconds)
       }
     }
   
@@ -29,17 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
       if (charIndex > 0) {
         typingText.textContent = texts[index].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(erase, 100);
+        setTimeout(erase, 100); // Adjust backspacing speed (milliseconds)
       } else {
         index = (index + 1) % texts.length;
-        setTimeout(type, 500);
+        setTimeout(type, 500); // Adjust delay before typing next text (milliseconds)
       }
     }
   
-    type(); 
+    type(); // Start typing
   });
   
-
+// script.js
+// JavaScript to control the typing animation
 document.addEventListener('DOMContentLoaded', function() {
   const lines = [
     "I'm Borno. I'm from Bangladesh. I've started learning coding in 2020 when",
@@ -65,17 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
           if (charIndex < lines[lineIndex].length) {
               typingDiv.innerHTML += lines[lineIndex].charAt(charIndex);
               charIndex++;
-              setTimeout(type, 50); 
+              setTimeout(type, 50); // Adjust typing speed (milliseconds)
           } else {
-              typingDiv.innerHTML += '<br>'; 
+              typingDiv.innerHTML += '<br>'; // Insert line break
               charIndex = 0;
               lineIndex++;
-              setTimeout(type, 500); 
+              setTimeout(type, 500); // Adjust delay between lines (milliseconds)
           }
       }
   }
 
-  
+  // Call the typing function when the page loads
   type();
 });
 
@@ -115,22 +116,22 @@ document.addEventListener('DOMContentLoaded', function() {
               if (charIndex < lines[lineIndex].length) {
                   typingDiv.innerHTML += lines[lineIndex].charAt(charIndex);
                   charIndex++;
-                  setTimeout(type, 50);
+                  setTimeout(type, 50); // Adjust typing speed (milliseconds)
               } else {
-                  typingDiv.innerHTML += '<br>'; 
+                  typingDiv.innerHTML += '<br>'; // Insert line break
                   charIndex = 0;
                   lineIndex++;
-                  setTimeout(type, 500); 
+                  setTimeout(type, 500); // Adjust delay between lines (milliseconds)
               }
           }
       }
 
-      
+      // Call the typing function when the page loads
       type();
   }
 });
 
-
+// Check if the pie chart container is in view
 document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     const pieChartContainer = document.querySelector('.pie-chart-container');
@@ -146,5 +147,21 @@ document.addEventListener('DOMContentLoaded', function() {
       pieChartContainer.classList.remove('in-view');
     }
   });
+});
+
+const list = document.querySelectorAll('.list');
+function activeLink() {
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+}
+list.forEach((item) =>
+item.addEventListener('click',activeLink));
+
+$(document).ready(function(){
+  $('.frame').click(function(){
+    $('.top').addClass('open');
+    $('.message').addClass('pull');
+  })
 });
 
